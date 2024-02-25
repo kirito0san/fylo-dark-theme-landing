@@ -54,12 +54,12 @@
 .footer p {
   @apply hover:font-semibold cursor-pointer  transition-all;
 }
-button:hover > img {
+.icons div:hover > img {
   filter: invert(10%) sepia(41%) saturate(471%) hue-rotate(128deg) brightness(103%) contrast(88%);
   -webkit-filter: invert(10%) sepia(41%) saturate(471%) hue-rotate(128deg) brightness(103%)
     contrast(88%);
 }
-button:has(img) {
+.icons div:has(img) {
   @apply hover:border-inside-Cyan;
 }
 .SeeHowFylo:hover img {

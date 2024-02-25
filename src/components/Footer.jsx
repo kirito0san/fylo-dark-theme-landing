@@ -32,28 +32,28 @@ const Footer = () => {
             <p>Terms</p>
             <p>Privacy</p>
           </div>
-          <div className="flex justify-center gap-3">
-            <button className="rounded-full w-[30px] h-[30px] flex items-center justify-center border-white border">
+          <div className="icons flex justify-center gap-3">
+            <div className="rounded-full w-[30px] h-[30px] flex items-center justify-center border-white border">
               <img
                 className="w-[20px] "
                 src={require("../images/icon-facebook.svg").default}
                 alt=""
               />
-            </button>
-            <button className="rounded-full w-[30px] h-[30px] flex items-center justify-center border-white border">
+            </div>
+            <div className="rounded-full w-[30px] h-[30px] flex items-center justify-center border-white border">
               <img
                 className="w-[20px] "
                 src={require("../images/icon-twitter.svg").default}
                 alt=""
               />
-            </button>
-            <button className="rounded-full w-[30px] h-[30px] flex items-center justify-center border-white border">
+            </div>
+            <div className="rounded-full w-[30px] h-[30px] flex items-center justify-center border-white border">
               <img
                 className="w-[20px] "
                 src={require("../images/icon-instagram.svg").default}
                 alt=""
               />
-            </button>
+            </div>
           </div>
         </div>
       </footer>
