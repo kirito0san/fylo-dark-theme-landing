@@ -1,13 +1,67 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+.Parent > * {
+  @apply w-[90%]  mx-auto;
+}
+.serves-section {
+  @apply flex flex-wrap justify-center gap-10 items-center text-center;
+}
+.serves-section > div {
+  @apply flex flex-col gap-2 items-center w-[320px] md:w-[calc(100%/3)];
+}
+.serves-section > div > img {
+  @apply w-[60px] mb-5;
+}
+.serves-section > div > div:nth-of-type(1),
+.serves-section > div > p:nth-of-type(1),
+.heading {
+  @apply font-Raleway font-bold text-lg;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.testimonials {
+  @apply flex flex-wrap gap-5 p-5  pb-[150px] justify-center;
+}
+.testimonials .warper {
+  @apply shadow-[0_0px_20px_5px_rgba(100,100,100,0.1)] flex flex-col gap-5 w-[350px] bg-testimonials p-5 rounded-lg;
+}
+.testimonials .warper > div {
+  @apply flex  gap-3 items-center;
+}
+.testimonials .warper > div > div p:nth-of-type(1) {
+  @apply font-Raleway font-bold;
+}
+.testimonials .warper > div > img {
+  @apply w-10 h-10 rounded-full;
+}
+.quotes {
+  @apply absolute -top-[17px]  left-1 w-5 md:-top-[53px] md:-left-[11px]  md:w-[80px];
+}
+.btn {
+  @apply rounded-full py-3 bg-gradient-to-r from-inside-Cyan transition-all hover:to-inside-Cyan to-inside-black;
+}
+.HeaderHover > * {
+  @apply relative py-2 hover:font-bold w-[60px] md:w-[80px] transition-all text-center;
+}
+.HeaderHover > *:hover::after {
+  @apply hover:w-full;
+}
+.HeaderHover > *::after {
+  @apply content-[''] absolute bottom-0 left-0  w-0  h-[2px] bg-white transition-all;
+}
+.footer p {
+  @apply hover:font-semibold cursor-pointer  transition-all;
+}
+button:hover > img {
+  filter: invert(10%) sepia(41%) saturate(471%) hue-rotate(128deg) brightness(103%) contrast(88%);
+  -webkit-filter: invert(10%) sepia(41%) saturate(471%) hue-rotate(128deg) brightness(103%)
+    contrast(88%);
+}
+button:has(img) {
+  @apply hover:border-inside-Cyan;
+}
+.SeeHowFylo:hover img {
+  @apply grayscale;
 }
